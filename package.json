@@ -34,12 +34,36 @@
     ],
     "env": {
       "node": true
+    },
+    "rules": {
+      "no-param-reassign": [
+        0,
+        {
+          "props": true,
+          "ignorePropertyModificationsFor": [
+            "ctx"
+          ]
+        }
+      ],
+      "no-underscore-dangle": [
+        0,
+        {
+          "allowAfterThis": true,
+          "allowAfterSuper": true
+        }
+      ]
     }
   },
   "dependencies": {
     "babel-core": "^6.24.0",
     "babel-preset-env": "^1.2.2",
     "babel-preset-latest": "^6.24.0",
+    "dotenv": "^4.0.0",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-mount": "^3.0.0",
+    "koa-route": "^3.2.0",
+    "koa2-cors": "^2.0.3",
     "lodash": "^4.17.4",
     "rimraf": "^2.6.1"
   },
